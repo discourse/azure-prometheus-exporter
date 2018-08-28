@@ -46,5 +46,5 @@ loop do
   end
 
   puts "metrics grabbed from #{latest_time} - last modified at #{last_modified}"
-  sleep 60
+  sleep 300
 end
