@@ -9,6 +9,12 @@ require 'prometheus_exporter/server'
 
 require 'json'
 
+# https://blog.eq8.eu/til/ruby-logs-and-puts-not-shown-in-docker-container-logs.html
+$docker_stdout = IO.new(IO.sysopen("/proc/1/fd/1", "w"),"w")
+$docker_stdout.sync = true
+require 'logger'
+logger = Logger.new($docker_stdout)
+
 port = ENV['port'] || 8080
 container_name = ENV['container'] || 'insights-metrics-pt1m'
 storage_account = ENV['storage_account']
@@ -45,6 +51,6 @@ loop do
     end
   end
 
-  puts "metrics grabbed from #{latest_time} - last modified at #{last_modified}"
+  logger.info "metrics grabbed from #{latest_time} - last modified at #{last_modified}"
   sleep 300
 end
