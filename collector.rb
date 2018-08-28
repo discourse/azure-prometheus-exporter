@@ -9,7 +9,7 @@ require 'prometheus_exporter/server'
 
 require 'json'
 
-port = ENV['port'] || 12345
+port = ENV['port'] || 8080
 container_name = ENV['container'] || 'insights-metrics-pt1m'
 storage_account = ENV['storage_account']
 storage_access_key = ENV['storage_access_key']
