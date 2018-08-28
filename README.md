@@ -6,14 +6,14 @@ Prometheus exporter for azure awg stats
 
 ### Required
 
-* `storage_account` - Azure blob storage account
+* `STORAGE_ACCOUNT` - Azure blob storage account
 
-* `storage_access_key` - Azure blob storage account access key
+* `STORAGE_ACCESS_KEY` - Azure blob storage account access key
 
 ### Optional
 
-* `container` - blob storage container to load defaults to `insights-metrics-pt1m`
+* `CONTAINER` - blob storage container to load defaults to `insights-metrics-pt1m`
 
-* `metrics_prefix` - Prometheus prefix for all exported metrics. Defaults to `azure_`
+* `METRICS_PREFIX` - Prometheus prefix for all exported metrics. Defaults to `azure_`
 
-* `port` - running port for the container. Defaults to `8080`
+* `PORT` - running port for the container. Defaults to `8080`

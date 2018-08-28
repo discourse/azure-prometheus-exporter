@@ -15,12 +15,12 @@ $docker_stdout.sync = true
 require 'logger'
 logger = Logger.new($docker_stdout)
 
-port = ENV['port'] || 8080
-container_name = ENV['container'] || 'insights-metrics-pt1m'
-storage_account = ENV['storage_account']
-storage_access_key = ENV['storage_access_key']
+port = ENV['PORT'] || 8080
+container_name = ENV['CONTAINER'] || 'insights-metrics-pt1m'
+storage_account = ENV['STORAGE_ACCOUNT']
+storage_access_key = ENV['STORAGE_ACCESS_KEY']
 
-metrics_prefix = ENV['metrics_prefix'] || 'azure_'
+metrics_prefix = ENV['METRICS_PREFIX'] || 'azure_'
 
 PrometheusExporter::Metric::Base.default_prefix = metrics_prefix
 
