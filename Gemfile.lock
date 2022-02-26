@@ -16,13 +16,13 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
-    mini_portile2 (2.5.1)
+    mini_portile2 (2.8.0)
     multipart-post (2.1.1)
-    nokogiri (1.11.4)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.13.3)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     prometheus_exporter (0.3.4)
-    racc (1.5.2)
+    racc (1.6.0)
 
 PLATFORMS
   ruby
